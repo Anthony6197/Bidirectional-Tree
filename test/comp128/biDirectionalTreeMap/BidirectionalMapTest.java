@@ -59,6 +59,14 @@ public class BidirectionalMapTest {
     }
 
     @Test
+    public void testClear(){
+         map.clear();
+         assert map.size() == 0;
+         assertTrue( map.put("carrot",4));
+         assertTrue(map.put("banan",5));
+    }
+
+    @Test
     public void testContains() {
         assertTrue(map.containsKey("carrot"));
         assertFalse(map.containsKey("olive"));
